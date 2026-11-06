@@ -32,7 +32,7 @@ export const ServicePhone: React.FC = () => {
             <span>Spesialis Smartphone Android &amp; iPhone</span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-charcoal">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-charcoal">
             Layanan Servis <span className="text-crimson italic">Handphone &amp; Gadget</span>
           </h2>
 
@@ -67,7 +67,7 @@ export const ServicePhone: React.FC = () => {
                   </div>
 
                   {/* Title & Short Description */}
-                  <h3 className="font-serif font-bold text-xl text-charcoal mb-2">
+                  <h3 className="font-bold text-xl text-charcoal mb-2">
                     {service.name}
                   </h3>
                   <p className="text-xs sm:text-sm text-taupe leading-relaxed mb-4">
@@ -121,7 +121,7 @@ export const ServicePhone: React.FC = () => {
               <span className="text-xs font-bold text-crimson uppercase tracking-wider">
                 Catatan Penting Layanan HP
               </span>
-              <h4 className="font-serif font-bold text-lg text-charcoal">
+              <h4 className="font-bold text-lg text-charcoal">
                 Fokus Spesialisasi HP Hanya untuk Perbaikan
               </h4>
               <p className="text-xs text-taupe leading-relaxed">
@@ -141,3 +141,4 @@ export const ServicePhone: React.FC = () => {
     </section>
   );
 };
+

@@ -38,7 +38,7 @@ export const ServiceWorkflow: React.FC = () => {
             <span>Standar Transparansi Kami</span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-charcoal">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-charcoal">
             4 Langkah Mudah <span className="text-crimson italic">Servis di Agung Store &amp; Care</span>
           </h2>
 
@@ -66,7 +66,7 @@ export const ServiceWorkflow: React.FC = () => {
 
               {/* Title & Description */}
               <div className="space-y-2">
-                <h3 className="font-serif font-bold text-lg text-charcoal group-hover:text-crimson transition-colors">
+                <h3 className="font-bold text-lg text-charcoal group-hover:text-crimson transition-colors">
                   {step.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-taupe leading-relaxed">

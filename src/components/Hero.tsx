@@ -19,10 +19,10 @@ export const Hero: React.FC = () => {
               </span>
             </div>
 
-            {/* Main Headline (Fraunces Serif) */}
-            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-charcoal leading-[1.18] tracking-tight">
+            {/* Main Headline */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-charcoal leading-[1.18] tracking-tight">
               Pusat Jual-Beli Laptop Terkurasi &amp;{' '}
-              <span className="text-crimson italic font-serif">Spesialis Perbaikan</span> Perangkat Anda.
+              <span className="text-crimson italic">Spesialis Perbaikan</span> Perangkat Anda.
             </h1>
 
             {/* Sub-headline */}
@@ -87,7 +87,7 @@ export const Hero: React.FC = () => {
                 </div>
 
                 <div className="space-y-1">
-                  <h2 className="font-serif font-bold text-xl sm:text-2xl text-charcoal">
+                  <h2 className="font-bold text-xl sm:text-2xl text-charcoal">
                     Standar Bengkel &amp; Toko
                   </h2>
                   <p className="text-xs text-taupe font-medium max-w-xs mx-auto">
@@ -136,3 +136,4 @@ export const Hero: React.FC = () => {
     </section>
   );
 };
+

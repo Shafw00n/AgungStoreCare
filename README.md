@@ -97,3 +97,4 @@ Semua informasi toko dan produk disimpan rapi dalam file TypeScript statis tanpa
 3. Build command: `npm run build`.
 4. Output directory: `dist`.
 5. Klik **Deploy**. Konfigurasi caching otomatis ditangani oleh `vercel.json`.
+

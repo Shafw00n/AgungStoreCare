@@ -35,7 +35,7 @@ export const TradeInBanner: React.FC = () => {
                 <span>Program Jual &amp; Tukar Tambah Laptop</span>
               </div>
 
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-charcoal leading-snug">
+              <h3 className="text-2xl sm:text-3xl font-bold text-charcoal leading-snug">
                 Punya Laptop Lama yang Ingin Dijual atau Ditukar Tambah?
               </h3>
 

@@ -48,3 +48,4 @@ export function getGeneralServiceUrl(serviceType: 'Laptop/PC' | 'Handphone' = 'L
     `Apakah bisa dicek terlebih dahulu? Terima kasih.`;
   return createWhatsAppUrl(message);
 }
+

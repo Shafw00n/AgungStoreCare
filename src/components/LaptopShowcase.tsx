@@ -60,7 +60,7 @@ export const LaptopShowcase: React.FC = () => {
             <span>Pajangan &amp; Etalase Unit Resmi</span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-charcoal">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-charcoal">
             Katalog Laptop Pilihan <span className="text-crimson italic">Agung Store</span>
           </h2>
 
@@ -212,7 +212,7 @@ export const LaptopShowcase: React.FC = () => {
                       {/* Name & Price */}
                       <div className="space-y-1">
                         <h3 
-                          className="font-serif font-bold text-lg text-charcoal group-hover:text-crimson transition-colors line-clamp-1 cursor-pointer"
+                          className="font-bold text-lg text-charcoal group-hover:text-crimson transition-colors line-clamp-1 cursor-pointer"
                           onClick={() => openLightbox(laptop)}
                         >
                           {laptop.name}
@@ -294,7 +294,7 @@ export const LaptopShowcase: React.FC = () => {
             <div className="flex items-center justify-between p-4 sm:p-5 border-b border-cream-300 bg-cream-100">
               <div>
                 <span className="text-xs font-semibold text-taupe uppercase tracking-wider">{selectedLaptop.brand}</span>
-                <h3 className="font-serif font-bold text-lg sm:text-xl text-charcoal">{selectedLaptop.name}</h3>
+                <h3 className="font-bold text-lg sm:text-xl text-charcoal">{selectedLaptop.name}</h3>
               </div>
               <button
                 onClick={closeLightbox}
@@ -363,7 +363,7 @@ export const LaptopShowcase: React.FC = () => {
 
               {/* Full Specs List */}
               <div className="space-y-3">
-                <h4 className="font-serif font-bold text-base text-charcoal flex items-center gap-2">
+                <h4 className="font-bold text-base text-charcoal flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-crimson" />
                   <span>Spesifikasi Teknis Lengkap</span>
                 </h4>

@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
                 />
               </div>
               <div>
-                <h3 className="font-serif font-bold text-xl text-crimson">
+                <h3 className="font-bold text-xl text-crimson">
                   AGUNG STORE &amp; CARE
                 </h3>
                 <p className="text-xs text-taupe font-medium">
@@ -94,7 +94,7 @@ export const Footer: React.FC = () => {
 
           {/* Quick Links Column */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-serif font-bold text-base text-charcoal border-b border-cream-300 pb-2">
+            <h4 className="font-bold text-base text-charcoal border-b border-cream-300 pb-2">
               Navigasi Cepat
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm text-taupe">
@@ -143,7 +143,7 @@ export const Footer: React.FC = () => {
           {/* Google Maps Embed Location */}
           <div className="lg:col-span-4 space-y-3">
             <div className="flex items-center justify-between border-b border-cream-300 pb-2">
-              <h4 className="font-serif font-bold text-base text-charcoal">
+              <h4 className="font-bold text-base text-charcoal">
                 Peta Lokasi Toko
               </h4>
               <a

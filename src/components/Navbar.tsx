@@ -44,7 +44,7 @@ export const Navbar: React.FC = () => {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-serif font-bold text-lg sm:text-xl text-crimson leading-tight tracking-wide group-hover:text-crimson-dark transition-colors">
+              <span className="font-bold text-lg sm:text-xl text-crimson leading-tight tracking-wide group-hover:text-crimson-dark transition-colors">
                 AGUNG STORE &amp; CARE
               </span>
               <span className="text-[10px] sm:text-xs text-taupe font-medium tracking-wider uppercase">
@@ -134,3 +134,4 @@ export const Navbar: React.FC = () => {
     </header>
   );
 };
+

@@ -207,3 +207,4 @@ export const laptopsData: LaptopItem[] = [
     highlights: ["Arsip Penjualan Sukses", "Apple Silicon M1 Super Efisien", "Baterai Tahan Seharian"]
   }
 ];
+

@@ -57,7 +57,7 @@
   </text>
 
   <!-- Main Word "AGUNG" -->
-  <text x="150" y="132" font-family="'Fraunces', 'Playfair Display', serif" font-size="44" font-weight="800" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="4">
+  <text x="150" y="132" font-family="'Plus Jakarta Sans', sans-serif" font-size="40" font-weight="800" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="4">
     AGUNG
   </text>
 
@@ -95,3 +95,4 @@
   <!-- Tiny Bottom Star -->
   <polygon points="150,254 152,258 157,258 153,261 155,266 150,263 145,266 147,261 143,258 148,258" fill="url(#goldGrad)" opacity="0.8" />
 </svg>
+

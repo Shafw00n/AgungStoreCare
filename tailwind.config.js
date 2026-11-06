@@ -39,8 +39,8 @@ export default {
         }
       },
       fontFamily: {
-        serif: ['Fraunces', 'Playfair Display', 'serif'],
         sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       boxShadow: {
@@ -51,3 +51,4 @@ export default {
   },
   plugins: [],
 }
+
