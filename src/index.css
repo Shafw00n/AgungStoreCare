@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    background-color: #FAF6F0;
+    color: #261815;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom Double-Line Motif from ASC Emblem */
+.asc-double-border {
+  border: 1px solid #C5A059;
+  position: relative;
+}
+
+.asc-double-border::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Subtle Warm Card Border */
+.asc-card-border {
+  border: 1px solid #DFD3C3;
+  transition: all 0.25s ease;
+}
+
+.asc-card-border:hover {
+  border-color: #C5A059;
+  box-shadow: 0 8px 24px -4px rgba(44, 26, 23, 0.08);
+}
