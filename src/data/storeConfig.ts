@@ -16,9 +16,7 @@ export interface StoreConfig {
     holidayNote: string;
   };
   socialLinks: {
-    instagram: string;
-    tiktok: string;
-    facebook: string;
+    threads: string;
     googleMaps: string;
   };
   googleMapsEmbedUrl: string;
@@ -42,9 +40,7 @@ export const storeConfig: StoreConfig = {
     holidayNote: "Hari Libur Nasional tetap buka (kecuali Idul Fitri & Tahun Baru)",
   },
   socialLinks: {
-    instagram: "https://instagram.com/agungstorecare",
-    tiktok: "https://tiktok.com/@agungstorecare",
-    facebook: "https://facebook.com/agungstorecare",
+    threads: "https://www.threads.com/@agung.storecare?igshid=NTc4MTIwNjQ2YQ==",
     googleMaps: "https://maps.google.com/?q=Jl.+Pemuda+Kp.+Pulo+RT+03/08+Cipayung+Cipayung+Jaya+Kota+Depok",
   },
   googleMapsEmbedUrl: "https://maps.google.com/maps?q=Jl.+Pemuda+Kp.+Pulo+RT+03/08+Cipayung+Jaya+Kota+Depok&t=&z=15&ie=UTF8&iwloc=&output=embed",

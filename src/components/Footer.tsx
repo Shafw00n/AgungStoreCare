@@ -4,13 +4,17 @@ import {
   MapPin, 
   Phone, 
   Clock, 
-  Instagram, 
-  Facebook, 
   ExternalLink, 
   MessageSquare,
   ChevronRight
 } from 'lucide-react';
 import { createWhatsAppUrl } from '../utils/whatsapp';
+
+const ThreadsIcon: React.FC<{ className?: string }> = ({ className = "w-4 h-4" }) => (
+  <svg viewBox="0 0 192 192" className={className} fill="currentColor">
+    <path d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4384 44.7442 97.3148 44.7438 97.1911 44.7438C77.4042 44.7438 61.9897 55.4389 54.9926 73.8052L72.2356 80.3708C77.1064 67.5855 86.8227 61.854 97.1866 61.854C97.2721 61.854 97.3582 61.8543 97.4449 61.8548C109.914 61.9343 118.825 69.9678 120.916 83.1895C114.73 81.332 108.067 80.3725 101.121 80.3725C69.7571 80.3725 50.8492 97.5146 50.8492 122.956C50.8492 144.204 65.5182 157.875 85.3406 157.875C103.204 157.875 115.176 148.067 121.282 134.464C126.879 146.997 137.603 154.341 152.062 154.341C164.536 154.341 174.521 146.68 178.673 133.882L161.43 127.316C159.227 134.103 155.679 137.231 152.062 137.231C142.231 137.231 137.402 128.529 137.402 110.871C137.402 109.288 137.443 107.72 137.525 106.171C144.912 110.155 151.721 115.688 156.407 122.924L171.853 113.626C165.419 103.684 155.703 96.0825 144.025 90.3551L141.537 88.9883ZM101.121 139.765C83.9932 139.765 74.4578 131.063 74.4578 122.956C74.4578 108.318 86.8242 98.4825 101.121 98.4825C108.067 98.4825 114.73 99.442 120.916 101.299C119.866 123.633 112.556 139.765 101.121 139.765Z"/>
+  </svg>
+);
 
 export const Footer: React.FC = () => {
   return (
@@ -59,35 +63,28 @@ export const Footer: React.FC = () => {
               </div>
             </div>
 
-            {/* Social Media Links */}
-            <div className="flex items-center gap-3 pt-2">
+            {/* Social Media Links (Threads & WhatsApp) */}
+            <div className="flex flex-wrap items-center gap-2.5 pt-2">
               <a
-                href={storeConfig.socialLinks.instagram}
+                href={storeConfig.socialLinks.threads}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram Agung Store & Care"
-                className="w-9 h-9 rounded-lg bg-cream-50 border border-cream-300 hover:border-gold flex items-center justify-center text-charcoal hover:text-crimson transition-colors shadow-sm"
+                aria-label="Threads Agung Store & Care"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-cream-50 border border-cream-300 hover:border-gold text-charcoal hover:text-crimson text-xs font-semibold transition-all duration-200 shadow-sm active:scale-95"
               >
-                <Instagram className="w-4 h-4" />
+                <ThreadsIcon className="w-4 h-4 flex-shrink-0" />
+                <span>Threads @agung.storecare</span>
               </a>
-              <a
-                href={storeConfig.socialLinks.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook Agung Store & Care"
-                className="w-9 h-9 rounded-lg bg-cream-50 border border-cream-300 hover:border-gold flex items-center justify-center text-charcoal hover:text-crimson transition-colors shadow-sm"
-              >
-                <Facebook className="w-4 h-4" />
-              </a>
+
               <a
                 href={createWhatsAppUrl("Halo Agung Store & Care, saya ingin bertanya...")}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp Agung Store & Care"
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-crimson text-cream-50 text-xs font-semibold hover:bg-crimson-dark transition-colors shadow-sm"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-crimson text-cream-50 border border-gold text-xs font-bold hover:bg-crimson-dark transition-all duration-200 shadow-sm active:scale-98"
               >
-                <MessageSquare className="w-3.5 h-3.5 text-gold-light" />
-                <span>Chat Admin</span>
+                <MessageSquare className="w-3.5 h-3.5 text-gold-light flex-shrink-0" />
+                <span>WhatsApp Admin</span>
               </a>
             </div>
           </div>
