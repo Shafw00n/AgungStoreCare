@@ -39,11 +39,11 @@ export const Navbar: React.FC = () => {
             href="#beranda" 
             className="flex items-center gap-3 flex-shrink-0 group"
           >
-            <div className="relative w-10 h-10 sm:w-11 sm:h-11 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
+            <div className="relative w-10 h-10 sm:w-11 sm:h-11 flex-shrink-0 transition-transform duration-300 group-hover:scale-105 rounded-full overflow-hidden shadow-sm border border-gold/70">
               <img
-                src="/assets/logo-asc.svg"
+                src="/assets/logo-asc.png"
                 alt="Logo Agung Store & Care"
-                className="w-full h-full object-contain drop-shadow-sm"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="flex flex-col">

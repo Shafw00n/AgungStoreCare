@@ -78,11 +78,11 @@ export const Hero: React.FC = () => {
 
               {/* Central ASC Emblem & Showcase */}
               <div className="flex flex-col items-center text-center space-y-5">
-                <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0">
+                <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 rounded-full overflow-hidden shadow-warm-lg border-2 border-gold/80">
                   <img
-                    src="/assets/logo-asc.svg"
+                    src="/assets/logo-asc.png"
                     alt="Emblem Resmi Agung Store & Care"
-                    className="w-full h-full object-contain filter drop-shadow-md"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 

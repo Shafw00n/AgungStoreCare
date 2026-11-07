@@ -20,11 +20,11 @@ export const Footer: React.FC = () => {
           {/* Brand Info & Address */}
           <div className="lg:col-span-5 space-y-5">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 flex-shrink-0">
+              <div className="w-12 h-12 flex-shrink-0 rounded-full overflow-hidden shadow-sm border border-gold/70">
                 <img
-                  src="/assets/logo-asc.svg"
+                  src="/assets/logo-asc.png"
                   alt="Logo Agung Store & Care"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div>
