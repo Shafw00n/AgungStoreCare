@@ -31,10 +31,10 @@ export const storeConfig: StoreConfig = {
   whatsappNumber: "6285779350634", // Nomor WhatsApp aktif toko Agung Store & Care
   formattedPhone: "0857-7935-0634",
   address: {
-    full: "Jl. Veteran No. 45, Ruko Metro Square Blok B-3 (Sebelah Barat Kampus / Dekat Alun-Alun)",
-    street: "Jl. Veteran No. 45, Ruko Metro Square Blok B-3",
-    city: "Indonesia",
-    notes: "Parkir luas, ruang tunggu ber-AC, dan meja teknisi transparan.",
+    full: "Jl. Pemuda Kp. Pulo RT 03/08, Cipayung, Cipayung Jaya, Kota Depok, Jawa Barat",
+    street: "Jl. Pemuda Kp. Pulo RT 03/08, Cipayung, Cipayung Jaya",
+    city: "Kota Depok, Jawa Barat",
+    notes: "Patokan area Kp. Pulo Cipayung Jaya, Kota Depok.",
   },
   operationalHours: {
     weekdays: "Senin – Sabtu: 09.00 – 21.00 WIB",
@@ -45,8 +45,8 @@ export const storeConfig: StoreConfig = {
     instagram: "https://instagram.com/agungstorecare",
     tiktok: "https://tiktok.com/@agungstorecare",
     facebook: "https://facebook.com/agungstorecare",
-    googleMaps: "https://maps.google.com/?q=Agung+Store+and+Care",
+    googleMaps: "https://maps.google.com/?q=Jl.+Pemuda+Kp.+Pulo+RT+03/08+Cipayung+Cipayung+Jaya+Kota+Depok",
   },
-  googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126500.0!2d112.6!3d-7.98!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTgnNDguMCJTIDExMsKwMzYnMDAuMCJF!5e0!3m2!1sid!2sid!4v1650000000000!5m2!1sid!2sid",
+  googleMapsEmbedUrl: "https://maps.google.com/maps?q=Jl.+Pemuda+Kp.+Pulo+RT+03/08+Cipayung+Jaya+Kota+Depok&t=&z=15&ie=UTF8&iwloc=&output=embed",
 };
 
