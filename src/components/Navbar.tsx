@@ -33,13 +33,13 @@ export const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-4 lg:gap-8">
+        <div className="flex items-center justify-between gap-3 lg:gap-6">
           {/* Left: Brand Identity */}
           <a 
             href="#beranda" 
-            className="flex items-center gap-3 flex-shrink-0 group"
+            className="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 group"
           >
-            <div className="relative w-10 h-10 sm:w-11 sm:h-11 flex-shrink-0 transition-transform duration-300 group-hover:scale-105 rounded-full overflow-hidden shadow-sm border border-gold/70">
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 flex-shrink-0 transition-transform duration-300 group-hover:scale-105 rounded-full overflow-hidden shadow-sm border border-gold/70">
               <img
                 src="/assets/logo-asc.png"
                 alt="Logo Agung Store & Care"
@@ -47,22 +47,22 @@ export const Navbar: React.FC = () => {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-base sm:text-lg text-crimson leading-tight tracking-wide group-hover:text-crimson-dark transition-colors whitespace-nowrap">
+              <span className="font-bold text-sm sm:text-base text-crimson leading-tight tracking-wide group-hover:text-crimson-dark transition-colors whitespace-nowrap">
                 AGUNG STORE &amp; CARE
               </span>
-              <span className="text-[10px] sm:text-[11px] text-taupe font-medium tracking-wider uppercase whitespace-nowrap">
+              <span className="text-[9px] sm:text-[10px] text-taupe font-medium tracking-wider uppercase whitespace-nowrap">
                 Jual • Beli • Service Spesialis
               </span>
             </div>
           </a>
 
-          {/* Center: Desktop Navigation Links with Clean Pill Hover */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2 flex-wrap justify-center">
+          {/* Center: Desktop Navigation Links (Compact & Single Line) */}
+          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1.5 flex-nowrap justify-center">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="px-2.5 xl:px-3 py-1.5 rounded-lg text-xs xl:text-sm font-semibold text-charcoal/85 hover:text-crimson hover:bg-cream-200/70 transition-all whitespace-nowrap"
+                className="px-2 xl:px-2.5 py-1 rounded-md text-[11px] xl:text-xs font-semibold text-charcoal/85 hover:text-crimson hover:bg-cream-200/60 transition-all whitespace-nowrap"
               >
                 {link.label}
               </a>
@@ -70,15 +70,15 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Right: Actions */}
-          <div className="flex items-center gap-2.5 flex-shrink-0">
+          <div className="flex items-center gap-2 flex-shrink-0">
             {/* Desktop CTA Button */}
             <a
               href={getGeneralServiceUrl('Laptop/PC')}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-2 px-3.5 xl:px-4 py-2 text-xs xl:text-sm font-bold rounded-lg bg-crimson text-cream-50 border border-gold hover:bg-crimson-dark transition-all duration-200 shadow-sm hover:shadow-warm active:scale-98 whitespace-nowrap"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] xl:text-xs font-bold rounded-lg bg-crimson text-cream-50 border border-gold hover:bg-crimson-dark transition-all duration-200 shadow-sm hover:shadow-warm active:scale-98 whitespace-nowrap"
             >
-              <MessageSquare className="w-4 h-4 text-gold-light flex-shrink-0" />
+              <MessageSquare className="w-3.5 h-3.5 text-gold-light flex-shrink-0" />
               <span>Konsultasi Servis</span>
             </a>
 
