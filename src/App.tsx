@@ -29,14 +29,14 @@ export const App: React.FC = () => {
       {/* Global Footer */}
       <Footer />
 
-      {/* Floating Action Button (Quick WhatsApp Consultation) */}
-      <div className="fixed bottom-5 right-5 z-40 sm:bottom-6 sm:right-6">
+      {/* Floating Action Button (Quick WhatsApp Consultation with iOS Safe Area) */}
+      <div className="fixed bottom-[calc(1.25rem+env(safe-area-inset-bottom,0px))] right-4 sm:right-6 z-40">
         <a
           href={getGeneralServiceUrl('Laptop/PC')}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Konsultasi Cepat via WhatsApp"
-          className="group flex items-center gap-2.5 px-4 py-3 rounded-full bg-crimson text-cream-50 border-2 border-gold shadow-warm-lg hover:bg-crimson-dark transition-all duration-300 hover:scale-105 active:scale-95"
+          className="group min-h-[46px] flex items-center gap-2.5 px-4 py-2.5 sm:py-3 rounded-full bg-crimson text-cream-50 border-2 border-gold shadow-warm-lg hover:bg-crimson-dark active:scale-95 transition-all duration-300"
         >
           <div className="relative">
             <MessageSquare className="w-5 h-5 text-gold-light" />

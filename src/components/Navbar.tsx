@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MessageSquare, Wrench } from 'lucide-react';
-import { storeConfig } from '../data/storeConfig';
 import { getGeneralServiceUrl } from '../utils/whatsapp';
 
 export const Navbar: React.FC = () => {
@@ -14,6 +13,21 @@ export const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Lock body scroll on iOS/Android when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+    } else {
+      document.body.style.overflow = 'unset';
+      document.body.style.touchAction = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+      document.body.style.touchAction = 'unset';
+    };
+  }, [mobileMenuOpen]);
 
   const navLinks = [
     { label: 'Beranda', href: '#beranda' },
@@ -106,34 +120,41 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer Backdrop & Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-cream-50/98 border-b border-cream-300 px-4 pt-3 pb-6 space-y-3 transition-all animate-fadeIn shadow-warm">
-          <div className="flex flex-col space-y-1 divide-y divide-cream-200">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="py-2.5 px-3 text-sm font-semibold text-charcoal hover:text-crimson hover:bg-cream-100 rounded-md transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
+        <>
+          <div 
+            className="fixed inset-0 top-[60px] bg-charcoal/50 backdrop-blur-sm z-40 lg:hidden animate-fadeIn"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+          <div className="relative z-50 lg:hidden bg-cream-50/98 border-b-2 border-gold/40 px-4 pt-3 pb-6 space-y-4 shadow-warm-lg max-h-[calc(100vh-65px)] overflow-y-auto">
+            <div className="flex flex-col space-y-1 divide-y divide-cream-200">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="min-h-[44px] flex items-center py-2.5 px-3 text-sm font-semibold text-charcoal active:text-crimson active:bg-cream-200/60 rounded-lg transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
 
-          <div className="pt-3">
-            <a
-              href={getGeneralServiceUrl('Laptop/PC')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-bold rounded-lg bg-crimson text-cream-50 border border-gold shadow-sm hover:bg-crimson-dark transition-colors"
-            >
-              <Wrench className="w-4 h-4 text-gold-light" />
-              <span>Tanya Servis via WhatsApp ({storeConfig.formattedPhone})</span>
-            </a>
+            <div className="pt-2">
+              <a
+                href={getGeneralServiceUrl('Laptop/PC')}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full min-h-[46px] flex items-center justify-center gap-2 px-4 py-3 text-sm font-bold rounded-xl bg-crimson text-cream-50 border border-gold shadow-sm active:bg-crimson-dark transition-all"
+              >
+                <Wrench className="w-4 h-4 text-gold-light" />
+                <span>Tanya Servis via WhatsApp</span>
+              </a>
+            </div>
           </div>
-        </div>
+        </>
       )}
     </header>
   );

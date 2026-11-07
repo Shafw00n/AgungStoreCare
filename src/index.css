@@ -5,13 +5,41 @@
 @layer base {
   html {
     color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
   }
 
   body {
     background-color: #FAF6F0;
     color: #261815;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Support iOS Safe Areas */
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
   }
+
+  /* Prevent iOS automatic zoom on form input focus */
+  input, select, textarea {
+    font-size: 16px;
+  }
+  @media (min-width: 640px) {
+    input, select, textarea {
+      font-size: 0.875rem; /* 14px on desktop */
+    }
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera (Horizontal Swipeable Chips) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 /* Custom Double-Line Motif from ASC Emblem */

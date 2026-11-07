@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { LaptopItem, laptopsData } from '../data/laptopsData';
 import { getLaptopInquiryUrl } from '../utils/whatsapp';
 import { 
@@ -22,6 +22,21 @@ export const LaptopShowcase: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedLaptop, setSelectedLaptop] = useState<LaptopItem | null>(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  // Lock body scroll when detail modal is open on iOS & Android
+  useEffect(() => {
+    if (selectedLaptop) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+    } else {
+      document.body.style.overflow = 'unset';
+      document.body.style.touchAction = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+      document.body.style.touchAction = 'unset';
+    };
+  }, [selectedLaptop]);
 
   // Filter logic
   const filteredLaptops = laptopsData.filter((item) => {
@@ -70,12 +85,12 @@ export const LaptopShowcase: React.FC = () => {
         </div>
 
         {/* Filter Bar & Search Container */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8 bg-cream-100/70 p-3 sm:p-4 rounded-xl border border-cream-300">
-          {/* Filter Pills */}
-          <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
+        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3.5 mb-8 bg-cream-100/70 p-3 sm:p-4 rounded-xl border border-cream-300">
+          {/* Swipeable Filter Pills on Mobile */}
+          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 w-full md:w-auto -mx-1 px-1 touch-pan-x">
             <button
               onClick={() => setActiveFilter('all')}
-              className={`px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+              className={`min-h-[38px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all whitespace-nowrap flex-shrink-0 active:scale-95 ${
                 activeFilter === 'all'
                   ? 'bg-crimson text-cream-50 shadow-sm border border-gold'
                   : 'bg-cream-50 text-charcoal hover:bg-cream-200 border border-cream-300'
@@ -85,7 +100,7 @@ export const LaptopShowcase: React.FC = () => {
             </button>
             <button
               onClick={() => setActiveFilter('ready')}
-              className={`px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+              className={`min-h-[38px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all whitespace-nowrap flex-shrink-0 active:scale-95 ${
                 activeFilter === 'ready'
                   ? 'bg-forest text-cream-50 shadow-sm border border-forest'
                   : 'bg-cream-50 text-charcoal hover:bg-cream-200 border border-cream-300'
@@ -95,7 +110,7 @@ export const LaptopShowcase: React.FC = () => {
             </button>
             <button
               onClick={() => setActiveFilter('under-5m')}
-              className={`px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+              className={`min-h-[38px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all whitespace-nowrap flex-shrink-0 active:scale-95 ${
                 activeFilter === 'under-5m'
                   ? 'bg-crimson text-cream-50 shadow-sm border border-gold'
                   : 'bg-cream-50 text-charcoal hover:bg-cream-200 border border-cream-300'
@@ -105,7 +120,7 @@ export const LaptopShowcase: React.FC = () => {
             </button>
             <button
               onClick={() => setActiveFilter('kerja-kuliah')}
-              className={`px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+              className={`min-h-[38px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all whitespace-nowrap flex-shrink-0 active:scale-95 ${
                 activeFilter === 'kerja-kuliah'
                   ? 'bg-crimson text-cream-50 shadow-sm border border-gold'
                   : 'bg-cream-50 text-charcoal hover:bg-cream-200 border border-cream-300'
@@ -115,7 +130,7 @@ export const LaptopShowcase: React.FC = () => {
             </button>
             <button
               onClick={() => setActiveFilter('gaming-grafis')}
-              className={`px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+              className={`min-h-[38px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all whitespace-nowrap flex-shrink-0 active:scale-95 ${
                 activeFilter === 'gaming-grafis'
                   ? 'bg-crimson text-cream-50 shadow-sm border border-gold'
                   : 'bg-cream-50 text-charcoal hover:bg-cream-200 border border-cream-300'
@@ -126,15 +141,15 @@ export const LaptopShowcase: React.FC = () => {
           </div>
 
           {/* Search Box */}
-          <div className="relative w-full md:w-64">
+          <div className="relative w-full md:w-64 flex-shrink-0">
             <input
               type="text"
               placeholder="Cari seri / prosesor..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-3.5 py-1.5 rounded-lg text-xs sm:text-sm bg-cream-50 border border-cream-300 text-charcoal placeholder-taupe/60 focus:outline-none focus:border-gold transition-colors"
+              className="w-full pl-9 pr-3.5 py-2 rounded-lg text-sm bg-cream-50 border border-cream-300 text-charcoal placeholder-taupe/60 focus:outline-none focus:border-gold transition-colors"
             />
-            <Search className="w-4 h-4 text-taupe absolute left-3 top-2.5" />
+            <Search className="w-4 h-4 text-taupe absolute left-3 top-3 pointer-events-none" />
           </div>
         </div>
 
@@ -280,25 +295,25 @@ export const LaptopShowcase: React.FC = () => {
         )}
       </div>
 
-      {/* Lightbox / Detail Modal */}
+      {/* Lightbox / Detail Modal (Responsive Bottom Sheet on Mobile) */}
       {selectedLaptop && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal/80 backdrop-blur-sm animate-fadeIn"
+          className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-charcoal/80 backdrop-blur-sm animate-fadeIn"
           onClick={closeLightbox}
         >
           <div 
-            className="relative bg-cream-50 rounded-2xl max-w-3xl w-full overflow-hidden shadow-2xl border-2 border-gold max-h-[90vh] flex flex-col"
+            className="relative bg-cream-50 rounded-t-2xl sm:rounded-2xl max-w-3xl w-full overflow-hidden shadow-2xl border-t-2 sm:border-2 border-gold max-h-[92vh] sm:max-h-[90vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="flex items-center justify-between p-4 sm:p-5 border-b border-cream-300 bg-cream-100">
-              <div>
-                <span className="text-xs font-semibold text-taupe uppercase tracking-wider">{selectedLaptop.brand}</span>
-                <h3 className="font-bold text-lg sm:text-xl text-charcoal">{selectedLaptop.name}</h3>
+            <div className="flex items-center justify-between p-4 sm:p-5 border-b border-cream-300 bg-cream-100 flex-shrink-0">
+              <div className="pr-2">
+                <span className="text-[11px] font-bold text-taupe uppercase tracking-wider">{selectedLaptop.brand}</span>
+                <h3 className="font-bold text-base sm:text-xl text-charcoal leading-snug">{selectedLaptop.name}</h3>
               </div>
               <button
                 onClick={closeLightbox}
-                className="p-1.5 rounded-lg text-taupe hover:text-crimson hover:bg-cream-200 transition-colors"
+                className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg text-taupe hover:text-crimson active:bg-cream-200 transition-colors flex-shrink-0"
                 aria-label="Tutup Detail"
               >
                 <X className="w-6 h-6" />
@@ -419,8 +434,8 @@ export const LaptopShowcase: React.FC = () => {
               </div>
             </div>
 
-            {/* Modal Sticky CTA Footer */}
-            <div className="p-4 sm:p-5 border-t border-cream-300 bg-cream-100 flex flex-col sm:flex-row items-center justify-between gap-3">
+            {/* Modal Sticky CTA Footer (iOS Safe Area Supported) */}
+            <div className="p-4 sm:p-5 pb-[calc(1rem+env(safe-area-inset-bottom,0px))] border-t border-cream-300 bg-cream-100 flex flex-col sm:flex-row items-center justify-between gap-3 flex-shrink-0">
               <div className="text-xs text-taupe hidden sm:block">
                 Konsultasikan langsung ketersediaan unit ini dengan admin ASC.
               </div>
@@ -428,10 +443,10 @@ export const LaptopShowcase: React.FC = () => {
                 href={getLaptopInquiryUrl(selectedLaptop.name, selectedLaptop.price)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg bg-crimson text-cream-50 font-semibold text-sm border border-gold hover:bg-crimson-dark transition-all shadow-sm"
+                className="w-full sm:w-auto min-h-[46px] inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-crimson text-cream-50 font-bold text-sm border border-gold active:bg-crimson-dark transition-all shadow-sm active:scale-98"
               >
                 <MessageSquare className="w-4 h-4 text-gold-light" />
-                <span>Tanya Ketersediaan Unit via WhatsApp</span>
+                <span>Tanya Ketersediaan Unit via WA</span>
                 <ChevronRight className="w-4 h-4" />
               </a>
             </div>

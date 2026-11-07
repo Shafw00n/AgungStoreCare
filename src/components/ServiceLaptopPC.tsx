@@ -109,7 +109,7 @@ export const ServiceLaptopPC: React.FC = () => {
                     href={createWhatsAppUrl(service.ctaMessage)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-cream-50 hover:bg-crimson text-charcoal hover:text-cream-50 border border-cream-300 hover:border-gold font-semibold text-xs sm:text-sm transition-all duration-200 shadow-sm group"
+                    className="w-full min-h-[44px] inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-cream-50 hover:bg-crimson active:bg-crimson text-charcoal hover:text-cream-50 active:text-cream-50 border border-cream-300 hover:border-gold font-semibold text-xs sm:text-sm transition-all duration-200 shadow-sm active:scale-98 group"
                   >
                     <MessageSquare className="w-4 h-4 text-crimson group-hover:text-gold-light transition-colors" />
                     <span>Konsultasi &amp; Tanya Biaya</span>

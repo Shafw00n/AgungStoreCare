@@ -14,7 +14,7 @@ import { createWhatsAppUrl } from '../utils/whatsapp';
 
 export const Footer: React.FC = () => {
   return (
-    <footer id="lokasi" className="bg-cream-100 border-t-2 border-gold/40 text-charcoal pt-16 pb-12 relative">
+    <footer id="lokasi" className="bg-cream-100 border-t-2 border-gold/40 text-charcoal pt-14 sm:pt-16 pb-28 sm:pb-12 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Brand Info & Address */}

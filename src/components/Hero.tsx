@@ -12,29 +12,29 @@ export const Hero: React.FC = () => {
           {/* Left Column: Editorial Headline & Value Propositions */}
           <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-left">
             {/* Eyebrow Badge with Gold Border Motif */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cream-100 border border-gold/70 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-crimson animate-pulse"></span>
-              <span className="text-xs sm:text-xs font-semibold tracking-wider text-charcoal uppercase">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cream-100 border border-gold/70 shadow-sm max-w-full">
+              <span className="w-2 h-2 rounded-full bg-crimson animate-pulse flex-shrink-0"></span>
+              <span className="text-[10px] sm:text-xs font-bold tracking-wider text-charcoal uppercase truncate">
                 JUAL • BELI • SERVICE LAPTOP, PC &amp; HANDPHONE
               </span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-charcoal leading-[1.18] tracking-tight">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-charcoal leading-[1.2] tracking-tight">
               Pusat Jual-Beli Laptop Terkurasi &amp;{' '}
               <span className="text-crimson italic">Spesialis Perbaikan</span> Perangkat Anda.
             </h1>
 
             {/* Sub-headline */}
-            <p className="text-base sm:text-lg text-taupe leading-relaxed max-w-2xl font-normal">
+            <p className="text-sm sm:text-lg text-taupe leading-relaxed max-w-2xl font-normal">
               Agung Store &amp; Care menghadirkan etalase laptop seken pilihan berkualitas prima dengan garansi toko terpercaya, serta layanan servis hardware profesional untuk Laptop, PC Desktop, dan Handphone—dikerjakan transparan dan didukung suku cadang teruji.
             </p>
 
             {/* Dual CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2">
               <a
                 href="#katalog-laptop"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg bg-crimson text-cream-50 font-semibold text-sm sm:text-base border border-gold hover:bg-crimson-dark transition-all duration-200 shadow-md hover:shadow-warm active:scale-98"
+                className="min-h-[48px] inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-crimson text-cream-50 font-bold text-sm sm:text-base border border-gold active:bg-crimson-dark transition-all duration-200 shadow-md hover:shadow-warm active:scale-98"
               >
                 <ShoppingBag className="w-5 h-5 text-gold-light" />
                 <span>Lihat Stok &amp; Jual-Beli Laptop</span>
@@ -42,7 +42,7 @@ export const Hero: React.FC = () => {
 
               <a
                 href="#service-laptop-pc"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg bg-cream-100 text-charcoal font-semibold text-sm sm:text-base border border-gold hover:bg-cream-200 hover:text-crimson transition-all duration-200 shadow-sm active:scale-98"
+                className="min-h-[48px] inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-cream-100 text-charcoal font-bold text-sm sm:text-base border border-gold active:bg-cream-200 active:text-crimson transition-all duration-200 shadow-sm active:scale-98"
               >
                 <Wrench className="w-5 h-5 text-crimson" />
                 <span>Cek Layanan Servis</span>

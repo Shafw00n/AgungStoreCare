@@ -131,7 +131,7 @@ export const TradeInBanner: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full mt-2 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-crimson text-cream-50 font-semibold text-sm border border-gold hover:bg-crimson-dark transition-all duration-200 shadow-sm active:scale-98"
+                  className="w-full mt-2 min-h-[48px] inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-crimson text-cream-50 font-bold text-sm border border-gold active:bg-crimson-dark transition-all duration-200 shadow-sm active:scale-98"
                 >
                   <Send className="w-4 h-4 text-gold-light" />
                   <span>Tawarkan Laptop Anda via WA Sekarang</span>
