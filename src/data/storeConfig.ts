@@ -28,8 +28,8 @@ export const storeConfig: StoreConfig = {
   name: "Agung Store & Care",
   shortName: "ASC",
   tagline: "Pusat Jual-Beli Laptop Terkurasi & Spesialis Servis Perangkat Anda",
-  whatsappNumber: "6281234567890", // Ganti dengan nomor WhatsApp aktif toko
-  formattedPhone: "0812-3456-7890",
+  whatsappNumber: "6285779350634", // Nomor WhatsApp aktif toko Agung Store & Care
+  formattedPhone: "0857-7935-0634",
   address: {
     full: "Jl. Veteran No. 45, Ruko Metro Square Blok B-3 (Sebelah Barat Kampus / Dekat Alun-Alun)",
     street: "Jl. Veteran No. 45, Ruko Metro Square Blok B-3",
